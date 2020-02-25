@@ -22,7 +22,8 @@ instalado:
 ## Ejecutando el proyecto
  1) Desde una consola en la carpeta raiz del proyecto ejecutar:
   mvn exec:java -Dexec.mainClass="com.labs.lucasian.main.ApplicationRun".
-  
+  2) En caso de que el metodo anterior de ejecución no funcione, utilizar la guia para ejecutar (ubicada en la raiz
+  del proyecto).  
 ### Entrada
 El archivo llamado admin.csv(ubicado en raiz) es el documento en cuestión, puesto que se cargara y
 validara los datos ingresados, este archivo puede ser modificado o remplazado 
