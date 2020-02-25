@@ -9,6 +9,8 @@ El proyecto utilizo una instancia de oracle Database desde AWS, las credenciales
 configuración de hibernate, en cualquier caso desde este mismo archivo se puede configurar las credenciales para 
 apuntar a otra base de datos, para este caso ejecutar el archivo DDL que se encuentra en la raiz del proyecto.
 
+En caso de que se quiera cambiar el datasource se debe hacer mediante el archivo hibernate.cfg.xml de nuevo ejecutar el
+archivo DDL con el código SQL
 
 ## Instalando dependencias en repositorio local
 Se debe tener encuenta que el driver de oracle para conección a base de datos no esta disponible en el repositorio 
