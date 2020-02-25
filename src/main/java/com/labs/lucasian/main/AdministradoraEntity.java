@@ -5,7 +5,6 @@ import java.sql.Time;
 
 @Entity
 @Table(name = "ADMINISTRADORA", schema = "ADMIN")
-@SequenceGenerator(name="SEQ_ID_ADMINISTRADORA", initialValue=1, allocationSize=100)
 public class AdministradoraEntity {
     private Long id;
     private String codigo;
@@ -20,7 +19,8 @@ public class AdministradoraEntity {
 
     @Id
     @Column(name = "ID", nullable = false, precision = 0)
-    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator = "SEQ_ID_ADMINISTRADORA")
+    @SequenceGenerator(name="MY_SEQ_ID_ADMINISTRADORA",allocationSize = 1,sequenceName = "SEQ_ID_ADMINISTRADORA")
+    @GeneratedValue(generator = "SEQ_ID_ADMINISTRADORA")
     public Long getId() {
         return id;
     }

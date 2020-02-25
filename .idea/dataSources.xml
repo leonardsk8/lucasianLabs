@@ -11,5 +11,16 @@
         <property name="v$session.program" value="DataGrip" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="18e8a2d2-e5f1-4141-903c-431b5243bfa7">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+D:/new_workspace/lucasianLabs/src/main/resources/hibernate.cfg.xml</remarks>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@administrador.czdglxta5m61.us-east-2.rds.amazonaws.com:1521:ORCL</jdbc-url>
+    </data-source>
   </component>
 </project>
