@@ -20,7 +20,7 @@ public class AdministradoraEntity {
     @Id
     @Column(name = "ID", nullable = false, precision = 0)
     @SequenceGenerator(name="MY_SEQ_ID_ADMINISTRADORA",allocationSize = 1,sequenceName = "SEQ_ID_ADMINISTRADORA")
-    @GeneratedValue(generator = "SEQ_ID_ADMINISTRADORA")
+    @GeneratedValue(generator = "MY_SEQ_ID_ADMINISTRADORA")
     public Long getId() {
         return id;
     }
