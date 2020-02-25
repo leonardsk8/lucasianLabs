@@ -1,13 +1,6 @@
 package com.labs.lucasian.main;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 
-@Entity
-@Table(name="usuario"
-        , uniqueConstraints = {@UniqueConstraint(columnNames="email")}
-)
 public class AdministradoraVO {
     private String codigoAdministradora;
     private String nombre;

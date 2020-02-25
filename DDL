@@ -1,0 +1,19 @@
+
+create table ADMINISTRADORA
+(
+    ID           NUMBER not null
+        primary key,
+    CODIGO       VARCHAR2(20),
+    NOMBRE       VARCHAR2(200),
+    COD_TP_ID    VARCHAR2(2),
+    NRO_ID       VARCHAR2(50),
+    NATURALEZA   VARCHAR2(50),
+    MULTIPLE_ARP NUMBER(1),
+    FPS          NUMBER(1),
+    FUSIONADA    NUMBER(1),
+    FECHA_FUSION DATE
+);
+
+create sequence SEQ_ID_ADMINISTRADORA START WITH 1 INCREMENT BY 1;
+
+

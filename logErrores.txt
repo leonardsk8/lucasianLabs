@@ -1,0 +1,5 @@
+---------
+Registro No: 1
+Error en Nombre  campo vacio, 
+
+---------

@@ -7,6 +7,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.exception.ConstraintViolationException;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 public class AdministradoraDao  {
@@ -18,19 +19,20 @@ public class AdministradoraDao  {
         sessionFactory = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
     }
 
-    public void insert(AdministradoraEntity entity) {
+    public void insertList(List<AdministradoraEntity> listEntities) {
         Session session = null;
         Transaction transaction = null;
         try {
             session = sessionFactory.getCurrentSession();
             transaction = session.beginTransaction();
-            session.persist(entity);
+            listEntities.forEach(session::persist);
             transaction.commit();
         } catch (ConstraintViolationException cve) {
             if (transaction != null) {
                 transaction.rollback();
             }
-            System.out.println("Error ocurrrido por llave duplicada, insertando en " + entity.getClass());
+            System.out.println("Error ocurrrido por llave duplicada, insertando en "
+                    + listEntities.getClass());
         } catch (HibernateException e) {
             if (transaction != null) {
                 try {
@@ -39,7 +41,7 @@ public class AdministradoraDao  {
                     ;
                 }
             }
-            System.out.println("Error inesperado insertando " + entity.getClass());
+            System.out.println("Error inesperado insertando " + listEntities.getClass());
             }
         }
     }
